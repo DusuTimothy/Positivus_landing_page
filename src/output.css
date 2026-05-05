@@ -7,23 +7,33 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-medium: 500;
-    --tracking-tight: -0.025em;
+    --font-weight-bold: 700;
+    --tracking-tighter: -0.05em;
     --leading-tight: 1.25;
     --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
@@ -179,6 +189,12 @@
   }
 }
 @layer utilities {
+  .relative {
+    position: relative;
+  }
+  .bottom-10 {
+    bottom: calc(var(--spacing) * 10);
+  }
   .mx-10 {
     margin-inline: calc(var(--spacing) * 10);
   }
@@ -188,11 +204,14 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
   .my-16 {
     margin-block: calc(var(--spacing) * 16);
   }
-  .mt-0 {
-    margin-top: calc(var(--spacing) * 0);
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
@@ -203,44 +222,17 @@
   .mt-28 {
     margin-top: calc(var(--spacing) * 28);
   }
-  .-mr-0 {
-    margin-right: calc(var(--spacing) * -0);
-  }
-  .-mr-1 {
-    margin-right: calc(var(--spacing) * -1);
-  }
-  .-mr-4 {
-    margin-right: calc(var(--spacing) * -4);
-  }
-  .mr-0 {
-    margin-right: calc(var(--spacing) * 0);
-  }
-  .-mb-0 {
-    margin-bottom: calc(var(--spacing) * -0);
-  }
   .-mb-1 {
     margin-bottom: calc(var(--spacing) * -1);
-  }
-  .-mb-2 {
-    margin-bottom: calc(var(--spacing) * -2);
-  }
-  .mb-0 {
-    margin-bottom: calc(var(--spacing) * 0);
   }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
-  .-ml-0 {
-    margin-left: calc(var(--spacing) * -0);
-  }
-  .-ml-1 {
-    margin-left: calc(var(--spacing) * -1);
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
   }
   .ml-28 {
     margin-left: calc(var(--spacing) * 28);
-  }
-  .block {
-    display: block;
   }
   .flex {
     display: flex;
@@ -287,9 +279,6 @@
   .justify-evenly {
     justify-content: space-evenly;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -298,6 +287,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
@@ -312,39 +304,38 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-r-0 {
     border-right-style: var(--tw-border-style);
     border-right-width: 0px;
   }
-  .bg-\[\#\] {
-    background-color: #;
+  .border-black {
+    border-color: var(--color-black);
   }
-  .bg-\[\#b6\] {
-    background-color: #b6;
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
   }
-  .bg-\[\#b9\] {
-    background-color: #b9;
+  .border-gray-700 {
+    border-color: var(--color-gray-700);
+  }
+  .border-r-gray-500 {
+    border-right-color: var(--color-gray-500);
+  }
+  .border-l-gray-500 {
+    border-left-color: var(--color-gray-500);
   }
   .bg-\[\#b9ff66\] {
     background-color: #b9ff66;
   }
-  .bg-\[\#b9ff\] {
-    background-color: #b9ff;
-  }
-  .bg-\[\#b\] {
-    background-color: #b;
-  }
   .bg-\[\#f3f3f3\] {
     background-color: #f3f3f3;
-  }
-  .bg-\[\#f8f8f8\] {
-    background-color: #f8f8f8;
-  }
-  .bg-\[\#f\] {
-    background-color: #f;
-  }
-  .bg-\[\#fffff\] {
-    background-color: #fffff;
   }
   .bg-\[\#ffffff\] {
     background-color: #ffffff;
@@ -352,23 +343,30 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .pl-0 {
-    padding-left: calc(var(--spacing) * 0);
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);
@@ -389,6 +387,13 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .tracking-tighter {
+    --tw-tracking: var(--tracking-tighter);
+    letter-spacing: var(--tracking-tighter);
+  }
+  .text-\[\#b9ff66\] {
+    color: #b9ff66;
   }
   .text-white {
     color: var(--color-white);
@@ -435,6 +440,10 @@
   inherits: false;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -519,6 +528,7 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
