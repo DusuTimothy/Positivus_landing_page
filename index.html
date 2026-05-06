@@ -12,7 +12,7 @@
 
   <!-- HEADER SECTION -->
 
-  <header class="bg-white flex items-center justify-around gap-10 pt-10 fixed top-0 w-full z-20">
+  <header class="bg-white flex items-center justify-around gap-10 pt-10 fixed top-0 w-full z-20 cursor-pointer">
     <img src="img/positivus Logo.svg" alt="Positivus Logo">
     <nav class="flex items-center gap-10">
       <a href="#">About us</a>
@@ -32,7 +32,7 @@
       <p class="my-6">Our digital marketing agency helps businesses <br> grow and succeed online through a range of <br>
         services including
         SEO, PPC, social media marketing, <br> and content creation.</p>
-      <button class="text-white bg-black border rounded-lg py-2 px-4">Book a consultation</button>
+      <button class="text-white bg-black border rounded-lg py-2 px-4 cursor-pointer">Book a consultation</button>
     </section>
     <section>
       <img src="img/positivus mic.svg" alt="Positivus Mic" class="w-125">
@@ -41,7 +41,7 @@
 
   <!-- PARTNERS SECTION -->
 
-  <main class="flex justify-evenly mx-10 mt-16">
+  <main class="flex justify-evenly mx-10 mt-16 cursor-pointer">
     <img src="img/amazon.svg" alt="Amazon">
     <img src="img/dribble.svg" alt="Dribble">
     <img src="img/Hubspot.svg" alt="Hubspot">
@@ -145,7 +145,7 @@
       <p class="my-8">Contact us today to learn more about <br> how our digital marketing services can <br> help your
         business grow
         and succeed <br> online.</p>
-      <button class="bg-black text-white py-4 px-16 rounded-lg"><a href="#contact">Get your free proposal</a></button>
+      <button class="bg-black text-white py-4 px-16 rounded-lg cursor-pointer"><a href="#contact">Get your free proposal</a></button>
 
     </section>
     <section>
@@ -168,7 +168,7 @@
       <div class=" p-12">
         <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website
           traffic and a 25% increase in sales.</p>
-        <button class="flex items-center gap-4 mt-4 text-[#b9ff66]">Learn more<span><img src="img/case arrow.svg"
+        <button class="flex items-center gap-4 mt-4 text-[#b9ff66] cursor-pointer">Learn more<span><img src="img/case arrow.svg"
               alt="case arrow"></span></button>
       </div>
       <!-- CARD 2 -->
@@ -182,7 +182,7 @@
       <div class="p-12">
         <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website
           traffic and a 25% increase in sales.</p>
-        <button class="flex items-center gap-4 mt-4 text-[#b9ff66]">Learn more<span><img src="img/case arrow.svg"
+        <button class="flex items-center gap-4 mt-4 text-[#b9ff66] cursor-pointer">Learn more<span><img src="img/case arrow.svg"
               alt="case arrow"></span></button>
       </div>
     </section>
@@ -198,7 +198,7 @@
 
     <!-- WORKING PROCESS CARDS -->
 
-    <section>
+    <section class="cursor-pointer">
       <!-- CARD 1 -->
       <details class="border rounded-2xl shadow-[0_4px] mx-28 mb-8 cursor-pointer">
         <summary class="flex items-center justify-between p-6 ">
@@ -479,7 +479,7 @@
 
     <!-- INPUT FORM -->
 
-    <section class="bg-[#f3f3f3] rounded-3xl mx-28 pl-12 p-8 ">
+    <form action="" class="bg-[#f3f3f3] rounded-3xl mx-28 pl-12 p-8 ">
       <!-- Radio inputs section -->
       <aside class="flex text-sm gap-8">
         <div class="flex items-center gap-2">
@@ -516,15 +516,15 @@
         </aside>
         <img src="img/contact.webp" alt="" class="w-96">
       </article>
-    </section>
+    </form>
   </main>
 
   <!-- FOOTER SECTION -->
 
-  <footer class="bg-black text-white mx-28 rounded-t-3xl mt-24">
+  <footer class="bg-black text-white mx-28 rounded-t-3xl mt-24 p-10">
     <!-- Footer Header -->
 
-    <section class="flex justify-between items-center p-10 mb-10">
+    <section class="flex justify-between items-center cursor-pointer">
       <div><img src="img/positivus white Logo.svg" alt="Positivus_white_logo"></div>
       <div>
         <ul class="flex gap-5">
@@ -542,19 +542,24 @@
       </div>
     </section>
     <!-- Footer Contact -->
-    <section>
+    <section class="flex justify-between gap-10 py-10 border-b-2">
       <article>
-        <h3>Contact Us</h3>
-        <p>Email: Positivus@gmail.com</p>
-        <p>Phone: +2348083658788</p>
-        <p>Address: 1234 Street Name, City</p>
-        <p>Name: Country Name</p>
+        <h3 class="text-[#b9ff66] font-bold">Contact Us</h3>
+        <p class="mt-4 font"><span class="text-[#b9ff66]">Email:</span> Positivus@gmail.com</p>
+        <p class="mt-2"><span class="text-[#b9ff66]">Phone:</span> +2348083658788</p>
+        <address class="mt-2"><span class="text-[#b9ff66]">Address:</span> 1234 Street name, City name, Country name</address>
       </article>
-      <article></article>
+      <article class="bg-[#292a32] flex items-center p-10 rounded-lg">
+        <input type="email" name="" id="" placeholder="Email" class="py-2 pl-4 pr-20 border-2 rounded-sm">
+        <button type="submit" class="bg-[#b9ff66] text-black py-2.5 px-12 ml-4 rounded-sm text-sm cursor-pointer hover:bg-green-900 hover:text-white">Subscribe to news</button>
+      </article>
     </section>
 
     <!-- Footer Credits -->
-    <section></section>
+    <section class="font-bold flex justify-between mt-10">
+      <h3>2026 Positivus-Made with Astro by Timothy</h3>
+      <h3>Credits (Olga, Esteban) & Licence</h3>
+    </section>
   </footer>
 
 </body>
